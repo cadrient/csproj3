@@ -1,0 +1,251 @@
+<!--insert investigation html @ line 264 (replace "#")-->
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:900" rel="stylesheet">
+	<link rel="stylesheet" href="../CSS/main.css">
+	<style>
+		body{
+			background-size: cover;
+			margin: 0px;
+			background-image: url(https://www.biospectrumasia.com/uploads/articles/2-9602.jpg);
+		}
+	</style>
+	<script>
+		var par = document.getElementsByTagName("p")
+		var line = 0
+		var scene1 = function(){
+			switch(line){
+				case 0:
+				par[0].innerHTML = "Quite a lot of information we got there, didn't we?"
+				document.getElementById("previous").style.display = "none";
+				document.getElementById("sprite").src = "../Sprites/Jessie/jessiehappy.png";
+				break;
+				case 1:
+				document.getElementById("previous").style.display = "block"
+				par[0].innerHTML = "..but I don't think that's enough evidence to point out anything."
+				document.getElementById("sprite").src = "../Sprites/Jessie/jessietalking.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 2:
+				par[0].innerHTML = "Hey again!"
+				document.getElementById("sprite").src = "";
+				document.getElementById("sprite").style.display = "none";
+				break;
+				case 3:
+				par[0].innerHTML = "I just found a lead to your case!"
+				document.getElementById("sprite").src = "../Sprites/Darla/darlatalking.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 4:
+				par[0].innerHTML = "When I was fixing my AdTech project, I found a body!"
+				document.getElementById("sprite").src = "../Sprites/Darla/darlashocked.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 5:
+				par[0].innerHTML = "It's probably Nate's body, sleeping. Just like how he <em>slept when he was supposed to pass our Stat project.</em> Hope he gets the rest he deserves!"
+				document.getElementById("sprite").src = "../Sprites/Darla/darlatalking.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 6:
+				par[0].innerHTML = "<i>(What?)</i>"
+				document.getElementById("sprite").src = "";
+				document.getElementById("sprite").style.display = "none";
+				break;
+				case 7:
+				par[0].innerHTML = "Strangely enough, the police <em>barely tampered it</em> one bit."
+				document.getElementById("sprite").src = "../Sprites/Darla/darlathinking.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 8:
+				par[0].innerHTML = "Hmm. It's almost like <i>4 invisible beings</i> are trying to make our odds easier!"
+				document.getElementById("sprite").src = "../Sprites/Jessie/jessiethinking.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 9:
+				par[0].innerHTML = "<i>(WHAT?)</i>"
+				document.getElementById("sprite").src = "";
+				document.getElementById("sprite").style.display = "none";
+				break;
+				case 10:
+				par[0].innerHTML = "Haha, I'm just kidding. Anyway, let's go to the AdTech lab before those incompetent police gets their hands on this."
+				document.getElementById("sprite").src = "../Sprites/Jessie/jessiehappy.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 11:
+				par[0].innerHTML = "Thanks Darla!"
+				document.getElementById("sprite").src = "../Sprites/Jessie/jessiehappy.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 12:
+				par[0].innerHTML = "Glad to be of help! Now, where is my sci cal..."
+				document.getElementById("sprite").src = "../Sprites/Darla/darla.png";
+				document.getElementById("sprite").style.display = "block";
+				document.body.style.backgroundImage = "url(https://www.biospectrumasia.com/uploads/articles/2-9602.jpg)";
+				break;
+			}
+		}
+		var scene2 = function(){
+			switch(line){
+				case 13:
+				par[0].innerHTML = "..."
+				document.getElementById("sprite").src = "";
+				document.getElementById("sprite").style.display = "none";
+				document.body.style.backgroundImage = "url(https://cdnb.artstation.com/p/assets/images/images/004/677/241/large/ruslan-isyanov-school-day.jpg?1485452521)";
+				break;
+				case 14:
+				par[0].innerHTML = "OH NO, my carpool's going to leave me!"
+				document.getElementById("sprite").src = "../Sprites/Sophie/sophiepabebe.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 15:
+				par[0].innerHTML = "Hi Sophie! Would you mind helping us on Nate's case?"
+				document.getElementById("sprite").src = "../Sprites/Jessie/jessie.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 16:
+				par[0].innerHTML = "Nate's case? Oh right, his murder. Well, Nate was super rude! He kept <em>taking embarrassing photos of everyone!</em>"
+				document.getElementById("sprite").src = "../Sprites/Sophie/sophiepabebe.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 17:
+				par[0].innerHTML = "Well, that's not really what we were going to ask. Would you mind if we ask a few questions?"
+				document.getElementById("sprite").src = "../Sprites/Jessie/jessie.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 18:
+				par[0].innerHTML = "Fine, anything for you guys. Just make it quick! My carpool is waiting."
+				document.getElementById("sprite").src = "../Sprites/Sophie/sophiepabebe.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 19:
+				par[0].innerHTML = "So what were you doing two days ago?"
+				document.getElementById("sprite").src = "../Sprites/Jessie/jessietalking.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 20:
+				par[0].innerHTML = "I was in the Bio Lab, where I was studying about blood types. I was bored, so I tried doing calligraphy the whole period."
+				document.getElementById("sprite").src = "../Sprites/Sophie/sophietalking.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 21:
+				par[0].innerHTML = "Then, it was Chem, where we had the free time to experiment with different kinds of solutions."
+				document.getElementById("sprite").src = "../Sprites/Sophie/sophie.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 22:
+				par[0].innerHTML = "Then, it was umm..uhh, I'm sorry, I forgot! My memory's not the best. Oh, and I left my journal somewhere! I think. Aaaaa, I need to go!"
+				document.getElementById("sprite").src = "../Sprites/Sophie/sophietalking.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 23:
+				par[0].innerHTML = "Okay, that'll have to do. Bye Sophie!"
+				document.getElementById("sprite").src = "../Sprites/Jessie/jessietalking.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 24:
+				par[0].innerHTML = "My pleasure. Now I have to go!"
+				document.getElementById("sprite").src = "../Sprites/Sophie/sophieheart.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 25:
+				par[0].innerHTML = "<i>Are you sure that could help?</i>"
+				document.getElementById("sprite").src = "";
+				document.getElementById("sprite").style.display = "none";
+				break;
+				case 26:
+				par[0].innerHTML = "Well, she has to go so..."
+				document.getElementById("sprite").src = "../Sprites/Jessie/jessie.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 27:
+				par[0].innerHTML = "Oh, and where were we? to the AdTech lab!"
+				document.body.style.backgroundImage = "url(https://cdnb.artstation.com/p/assets/images/images/004/677/241/large/ruslan-isyanov-school-day.jpg?1485452521)";
+				document.getElementById("sprite").src = "../Sprites/Jessie/jessietalking.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+			  }
+			}
+		var scene3 = function(){
+				switch(line){
+					case 28:
+					par[0].innerHTML = ""
+					document.body.style.backgroundImage = "url(http://www.sp.sandipfoundation.org/wp-content/uploads/2015/03/0009_SP-Carpentry-shop.jpg)";
+					document.getElementById("sprite").src = "";
+					document.getElementById("sprite").style.display = "none";
+					break;
+					case 29:
+					par[0].innerHTML = "Finally, we have arrived."
+					document.getElementById("sprite").src = "../Sprites/Jessie/jessie.png";
+					document.getElementById("sprite").style.display = "block";
+					break;
+					case 30:
+					par[0].innerHTML = "And it doesn't look like there's just one Telosa here."
+					document.getElementById("sprite").src = "../Sprites/Jessie/jessietalking.png";
+					document.getElementById("sprite").style.display = "block";
+					break;
+					case 31:
+					par[0].innerHTML = "Urgh, they just won't give me my laptop!"
+					document.getElementById("sprite").src = "../Sprites/Mark/MarkAngry.png";
+					document.getElementById("sprite").style.display = "block";
+					break;
+				}
+			}
+		var nextLine = function() {
+                line++;
+								if(line<=12){
+                	scene1();
+								}
+								else if(line>12 && line<=27){
+                	scene2();
+								}
+								else if(line>27 && line<=100){
+                	scene3();
+								}
+								else if(line==101){
+									window.location.href = "#";
+								}
+            }
+		var prevLine = function() {
+                line = line - 1;
+								if(line<=12){
+                	scene1();
+								}
+								else if(line>12 && line<=27){
+                	scene2();
+								}
+								else if(line>27 && line<=100){
+                	scene3();
+								}
+            }
+	</script>
+<head>
+<body>
+	<img id="sprite" src="../Sprites/Jessie/jessiehappy.png">
+	<div id="bottom">
+		<div id = "dialogue">
+		<p>Quite a lot of information we got there, didn't we?<p>
+			<img id="previous" src ="../Sprites/next.png">
+			<img id="next" src ="../Sprites/next.png">
+		</div>
+	</div>
+</body>
+<script>
+document.getElementById("previous").style.display = "none";
+document.getElementById("sprite").style.display = "block";
+	document.getElementById("previous").addEventListener("click", prevLine)
+	document.getElementById("next").addEventListener("click", nextLine)
+	document.onkeydown = checkKey;
+	function checkKey(e) {
+		e = e || window.event;
+		if (e.keyCode == '37') {
+			prevLine();
+		}
+		else if (e.keyCode == '39') {
+			nextLine();
+		}
+
+}
+</script>
+</html>

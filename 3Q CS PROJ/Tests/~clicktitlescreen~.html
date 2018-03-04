@@ -1,0 +1,259 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="../CSS/main.css">
+
+<style>
+@font-face {
+  font-family: Linowrite;
+  src: url(Linowrite.ttf);
+}
+#div1 {
+    width: 470px;
+    height: 178px;
+    border: 1px solid #e75480;
+    position:absolute;
+  	bottom: 10vh;
+	background-color: pink;
+  z-index:-2;
+}
+#move1, #move2, #move3{
+  position:absolute;
+  top: 40px;
+  left: 50px;
+  float: left;
+  width: 70px;
+  height: 70px;
+}
+#move2{
+margin-left: 80px;}
+
+#move3{
+margin-left: 160px;
+}
+
+#item{
+border: 1px solid #aaaaaa;
+  width: 475px;
+    height: 175px;
+	}
+#inv{
+z-index: -99;
+}
+
+#slot1, #slot2, #slot3, #slot4, #slot5, #slot6, #slot7, #slot8, #slot9, #slot10{
+float: left;
+background-color: pink;
+height: 85px;
+width: 90px;
+padding: 1px;
+border: 1px solid #e75480;
+}
+		#check2{
+		display: none;
+		}
+</style>
+</head>
+<body>
+<script>
+		var par = document.getElementsByTagName("p")
+		var line = 0
+		var scene1 = function(){
+			switch(line){
+				case 0:
+				par[0].innerHTML = "Hello!"
+				document.getElementById("sprite").src = "../Sprites/Darla/darla.png";
+				break;
+				case 1:
+				par[0].innerHTML = "Pick up those things covered in blood yay!"
+				document.getElementById("sprite").src = "../Sprites/Darla/darlatalking.png";
+				break;
+				case 2:
+				par[0].innerHTML = "Click on them once to pick them up! Click on that button up there when you're done."
+				document.getElementById("sprite").src = "../Sprites/Darla/darlashocked.png";
+				break;
+				case 3:
+				document.getElementById("dialogue").style.display = "none"
+				document.getElementById("sprite").style.display = "none"
+				break;
+				case 4:
+				document.getElementById("dialogue").style.display = "none"
+				document.getElementById("sprite").style.display = "none"
+				document.getElementById("check2").style.display = "block"
+				break;
+
+			}
+		}
+		var nextLine = function() {
+                line++;
+                scene1();
+            }
+		var prevLine = function() {
+                line = line - 1;
+                scene1();
+            }
+
+
+var node = document.createElement("img");
+node.src = "https://png.pngtree.com/element_origin_min_pic/16/11/04/59a79d50e2e0bd65f807e6e2a2216470.jpg"
+var node2 = document.createElement("img");
+node2.src = "https://images-na.ssl-images-amazon.com/images/I/714tx9QbaKL._SL1500_.jpg"
+var node3 = document.createElement("img");
+node3.src = "http://www.zombiesplayground.com/images/Product/large/RC-1053.png"
+
+var toInventory = function(){
+   var x = document.getElementById("div1").getElementsByTagName("div")[0].appendChild(node);
+   x.setAttribute("id", "img1");
+   x.setAttribute("data-placement", "bottom");
+   x.setAttribute("data-toggle", "tooltip");
+   x.setAttribute("title", "Nate's backpack. He was said to have been killed with this on.");}
+
+   var takenAway = function(){
+document.getElementById("move1").style.display = "none";
+}
+
+var returnBack = function(){
+var list = document.getElementById("slot1");
+list.removeChild(list.childNodes[0]);
+}
+
+var originalPlace = function(){
+document.getElementById("move1").style.display = "block";
+}
+
+var toInventory2 = function(){
+   var x = document.getElementById("div1").getElementsByTagName("div")[1].appendChild(node2)
+   x.setAttribute("id", "img2");
+   x.setAttribute("data-placement", "bottom");
+   x.setAttribute("data-toggle", "tooltip");
+   x.setAttribute("title", "A microscope. Apparently several drops of blood were found, but it was not Nate's.");
+   }
+
+var takenAway2 = function(){
+document.getElementById("move2").style.display = "none";
+}
+
+
+var returnBack2 = function(){
+var list = document.getElementById("slot2");
+list.removeChild(list.childNodes[0]);
+}
+
+var originalPlace2 = function(){
+document.getElementById("move2").style.display = "block";
+}
+
+var toInventory3 = function(){
+   var x = document.getElementById("div1").getElementsByTagName("div")[2].appendChild(node3)
+   x.setAttribute("id", "img3");
+   x.setAttribute("data-placement", "bottom");
+   x.setAttribute("data-toggle", "tooltip");
+   x.setAttribute("title", "A knife. So out of place!");
+   }
+
+var takenAway3 = function(){
+document.getElementById("move3").style.display = "none";
+}
+
+
+var returnBack3 = function(){
+var list = document.getElementById("slot3");
+list.removeChild(list.childNodes[0]);
+}
+
+var originalPlace3 = function(){
+document.getElementById("move3").style.display = "block";
+}
+</script>
+
+	<img id="sprite" src="../Sprites/Darla/darla.jpg">
+	<div id="bottom">
+		<div id = "dialogue">
+		<p>Hello!<p>
+			<img id="previous" src ="../Sprites/next.png">
+			<img id="next" src ="../Sprites/next.png">
+		</div>
+	</div>
+<div id = "invcontain">
+<button type = "button" id = "check">I think I'm done? </button>
+<button type = "button" id = "check2">I think I'm ready again? </button>
+<div id = "item">
+<img id = "move1" src = "https://png.pngtree.com/element_origin_min_pic/16/11/04/59a79d50e2e0bd65f807e6e2a2216470.jpg" data-placement="bottom" data-toggle="tooltip" title="Nate's backpack. He was said to have been killed with this on.">
+<img id = "move2" src = "https://images-na.ssl-images-amazon.com/images/I/714tx9QbaKL._SL1500_.jpg" data-placement="bottom" data-toggle="tooltip" title="A microscope. Apparently several drops of blood were found, but it was not Nate's.">
+<img id = "move3" src = "http://www.zombiesplayground.com/images/Product/large/RC-1053.png" data-placement="bottom" data-toggle="tooltip" title="A knife. So out of place!">
+</div>
+<div id="div1">
+<div id = "slot1"></div>
+<div id = "slot2"></div>
+<div id = "slot3"></div>
+<div id = "slot4"></div>
+<div id = "slot5"></div>
+<div id = "slot6"></div>
+<div id = "slot7"></div>
+<div id = "slot8"></div>
+<div id = "slot9"></div>
+<div id = "slot10"></div>
+</div>
+</div>
+<script>
+document.getElementById("move1").addEventListener("click", function(){takenAway(); toInventory()})
+document.getElementById("slot1").addEventListener("dblclick", function(){returnBack(); originalPlace()})
+document.getElementById("move2").addEventListener("click", function(){takenAway2(); toInventory2()})
+document.getElementById("slot2").addEventListener("dblclick", function(){returnBack2(); originalPlace2()})
+document.getElementById("move3").addEventListener("click", function(){takenAway3(); toInventory3()})
+document.getElementById("slot3").addEventListener("dblclick", function(){returnBack3(); originalPlace3()})
+
+$(document).ready(function(){
+$("#check").click(function(){
+if ( $("#slot1").children().length > 0 && $("#slot2").children().length > 0 && $("#slot3").children().length > 0) {
+$(this).remove();
+document.getElementById("dialogue").style.display = "block"
+document.getElementById("sprite").style.display = "block"
+par[0].innerHTML = "Wow! You're done! Now remove them again! Click the button again when you're ready."
+document.getElementById("sprite").src = "../Sprites/Darla/darlashocked.jpg";
+}
+else{
+alert("ERROR! YOU DIDNT COMPLETE IT");
+}
+});
+});
+
+$(document).ready(function(){
+$("#check2").click(function(){
+if ( $("#slot1").children().length == 0 && $("#slot2").children().length == 0 && $("#slot3").children().length == 0) {
+document.getElementById("dialogue").style.display = "block"
+document.getElementById("sprite").style.display = "block"
+par[0].innerHTML = "Wow! You've achieved nothing! Congratulations!"
+document.getElementById("sprite").src = "../Sprites/Darla/darlashocked.jpg";
+}
+else{
+alert("ERROR! THERE'S STILL SOME STUFF LEFT");
+}
+});
+});
+
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+
+	document.getElementById("previous").addEventListener("click", prevLine)
+	document.getElementById("next").addEventListener("click", nextLine)
+	document.onkeydown = checkKey;
+	function checkKey(e) {
+		e = e || window.event;
+		if (e.keyCode == '37') {
+			prevLine();
+		}
+		else if (e.keyCode == '39') {
+			nextLine();
+		}
+
+		}
+</script>
+</body>
+</html>

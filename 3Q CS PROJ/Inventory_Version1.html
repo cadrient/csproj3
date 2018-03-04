@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+#div1 {
+    width: 470px;
+    height: 178px;
+    border: 1px solid #e75480;
+	margin-top: 500px;
+	background-color: pink;
+}
+#move1, #move2, #move3{
+  position:absolute;
+  top: 40px;
+  left: 50px;
+  float: left;
+}
+
+img{
+  width: 70px;
+  height: 70px;
+}
+
+#move2{
+margin-left: 80px;}
+
+#move3{
+margin-left: 160px;
+}
+
+#item{
+border: 1px solid #aaaaaa;
+  width: 475px;
+    height: 175px;
+	}
+#inv{
+z-index: -99;
+}
+
+#slot1, #slot2, #slot3, #slot4, #slot5, #slot6, #slot7, #slot8, #slot9, #slot10{
+float: left;
+background-color: pink;
+height: 85px;
+width: 90px;
+padding: 1px;
+border: 1px solid #e75480;
+}
+</style>
+</head>
+<body>
+<p> Click the item once to store to inventory, and click twice to remove. All the images are stored in the div "item" and returned there. Sa final game, we can create dedicated containers for each item, so that it returns to a specific proper position.</p>
+<div id = "item">
+<img id = "move1" src = "https://png.pngtree.com/element_origin_min_pic/16/11/04/59a79d50e2e0bd65f807e6e2a2216470.jpg">
+<img id = "move2" src = "https://images-na.ssl-images-amazon.com/images/I/714tx9QbaKL._SL1500_.jpg">
+<img id = "move3" src = "http://www.zombiesplayground.com/images/Product/large/RC-1053.png">
+</div>
+<div id="div1">
+<div id = "slot1"></div>
+<div id = "slot2"></div>
+<div id = "slot3"></div>
+<div id = "slot4"></div>
+<div id = "slot5"></div>
+<div id = "slot6"></div>
+<div id = "slot7"></div>
+<div id = "slot8"></div>
+<div id = "slot9"></div>
+<div id = "slot10"></div>
+</div> 
+<script>
+var node = document.createElement("img");
+node.src = "https://png.pngtree.com/element_origin_min_pic/16/11/04/59a79d50e2e0bd65f807e6e2a2216470.jpg"
+var node2 = document.createElement("img");
+node2.src = "https://images-na.ssl-images-amazon.com/images/I/714tx9QbaKL._SL1500_.jpg"
+var node3 = document.createElement("img");
+node3.src = "http://www.zombiesplayground.com/images/Product/large/RC-1053.png"
+
+var toInventory = function(){
+   document.getElementById("div1").getElementsByTagName("div")[0].appendChild(node).setAttribute("id", "img1");}
+   
+   var takenAway = function(){
+document.getElementById("move1").style.display = "none"; 
+}
+
+var returnBack = function(){
+var list = document.getElementById("slot1");
+list.removeChild(list.childNodes[0]);  
+}
+
+var originalPlace = function(){
+document.getElementById("move1").style.display = "block"; 
+}
+
+var toInventory2 = function(){
+   document.getElementById("div1").getElementsByTagName("div")[1].appendChild(node2).setAttribute("id", "img2");}
+
+var takenAway2 = function(){
+document.getElementById("move2").style.display = "none"; 
+}
+
+
+var returnBack2 = function(){
+var list = document.getElementById("slot2");
+list.removeChild(list.childNodes[0]);  
+}
+
+var originalPlace2 = function(){
+document.getElementById("move2").style.display = "block"; 
+}
+
+var toInventory3 = function(){
+   document.getElementById("div1").getElementsByTagName("div")[2].appendChild(node3).setAttribute("id", "img3");}
+
+var takenAway3 = function(){
+document.getElementById("move3").style.display = "none"; 
+}
+
+
+var returnBack3 = function(){
+var list = document.getElementById("slot3");
+list.removeChild(list.childNodes[0]);  
+}
+
+var originalPlace3 = function(){
+document.getElementById("move3").style.display = "block"; 
+}
+
+
+</script>
+<script>
+document.getElementById("move1").addEventListener("click", function(){takenAway(); toInventory()})
+document.getElementById("slot1").addEventListener("dblclick", function(){returnBack(); originalPlace()})
+document.getElementById("move2").addEventListener("click", function(){takenAway2(); toInventory2()})
+document.getElementById("slot2").addEventListener("dblclick", function(){returnBack2(); originalPlace2()})
+document.getElementById("move3").addEventListener("click", function(){takenAway3(); toInventory3()})
+document.getElementById("slot3").addEventListener("dblclick", function(){returnBack3(); originalPlace3()})
+</script>
+</body>
+</html>

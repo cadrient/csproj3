@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+	<style>
+		#bottom{
+			position: fixed;
+			bottom: 0px;
+			width: 100vw;
+		}
+		#dialogue{
+			height: 23vh;
+			width: 57vw;
+			margin: 0px auto;
+			border: 3px solid rgba(255, 255, 255, 0.9);
+			background-color: rgba(255,189,225, 0.9);
+			position: relative;
+			top: -20px;
+			padding: 10px 40px;
+			background-image:url("../Sprites/paper.png");
+		}
+		#dialogue p{
+			font-size: 22px;
+			text-align: center;
+			font-family: 'Source Code Pro';
+			color: black;
+			position:static;
+		}
+		#dialogue div{
+			margin:auto;
+			padding:10px;
+		}
+		#previous{
+			position: absolute;
+			bottom: 10px;
+			left: 10px;
+			width: 30px;
+			height: 30px;
+			transform: rotate(180deg);
+			border-radius: 50%;
+		}
+		#next{
+			
+			position: absolute;
+			bottom: 10px;
+			right: 10px;
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+		}
+		body{
+			margin: 0px;
+		}
+		#sprite {
+			width:500px;
+			z-index:-1;
+			position:absolute;
+			bottom:0px;
+			right:0px;
+		}
+	</style>
+	<script>
+		var par = document.getElementsByTagName("p")
+		var line = 0
+		var scene1 = function(){
+			switch(line){
+				case 0:
+				par[0].innerHTML = "Hello!"
+				document.getElementById("sprite").src = "../Sprites/Darla/darla.jpg";
+				break;
+				case 1:
+				par[0].innerHTML = "I love Sir Tarcy so much. Did you know he were da one who was da most Importamt persons in my life. I kenat beliv I came from the tough ten."
+				document.getElementById("sprite").src = "../Sprites/Darla/darlatalking.jpg";
+				break;
+				case 2:
+				par[0].innerHTML = "Test!"
+				document.getElementById("sprite").src = "../Sprites/Darla/darlashocked.jpg";
+				break;
+			}
+		}
+		var nextLine = function() {
+                line++;
+                scene1();
+            }
+		var prevLine = function() {
+                line = line - 1;
+                scene1();
+            }
+	</script>
+<head>
+<body>
+	<img id="sprite" src="../Sprites/Darla/darla.jpg">
+	<div id="bottom">
+		<div id = "dialogue">
+		<p>Hello!<p>
+			<img id="previous" src ="../Sprites/next.png">
+			<img id="next" src ="../Sprites/next.png">
+		</div>
+	</div>
+</body>
+<script>
+	document.getElementById("previous").addEventListener("click", prevLine)
+	document.getElementById("next").addEventListener("click", nextLine)
+	document.onkeydown = checkKey;
+	function checkKey(e) {
+		e = e || window.event;
+		if (e.keyCode == '37') {
+			prevLine();
+		}
+		else if (e.keyCode == '39') {
+			nextLine();
+		}
+
+}
+</script>
+</html>

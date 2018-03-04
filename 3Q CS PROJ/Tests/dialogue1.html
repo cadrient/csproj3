@@ -1,0 +1,250 @@
+<!--insert investigation html @ line 264 (replace "#")-->
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:900" rel="stylesheet">
+	<link rel="stylesheet" href="../CSS/main.css">
+	<style>
+		body{
+			background-size: cover;
+			margin: 0px;
+			background-image: url(https://wallpaperscraft.com/image/class_desk_table_window_light_16736_1920x1080.png);
+		}
+	</style>
+	<script>
+		var par = document.getElementsByTagName("p")
+		var line = 0
+		var scene1 = function(){
+			switch(line){
+				case 0:
+				par[0].innerHTML = "..."
+				document.getElementById("sprite").style.display = "none";
+				document.getElementById("previous").style.display = "none";
+				document.getElementById("sprite").src = "";
+				break;
+				case 1:
+				document.getElementById("previous").style.display = "block"
+				par[0].innerHTML = "Psst!"
+				document.getElementById("sprite").src = "../Sprites/Jessie/jessiehappy.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 2:
+				par[0].innerHTML = "I'm Jessie Sy. I'm part of the journalism club. You're Cora, right?"
+				document.getElementById("sprite").src = "../Sprites/Jessie/jessietalking.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 3:
+				par[0].innerHTML = "<i>(...)</i>"
+				document.getElementById("sprite").src = "";
+				document.getElementById("sprite").style.display = "none";
+				break;
+				case 4:
+				par[0].innerHTML = "I'll take that as a yes."
+				document.getElementById("sprite").src = "../Sprites/Jessie/jessiesmile.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 5:
+				par[0].innerHTML = "You see, I've been snooping around on the mystery of Nate lately."
+				document.getElementById("sprite").src = "../Sprites/Jessie/jessiethinking.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 6:
+				par[0].innerHTML = "<i>Who's that?</i>"
+				document.getElementById("sprite").src = "";
+				document.getElementById("sprite").style.display = "none";
+				break;
+				case 7:
+				par[0].innerHTML = "Nate Telosa. Photographer. Was murdered lately. You know him?"
+				document.getElementById("sprite").src = "../Sprites/Jessie/jessietalking.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 8:
+				par[0].innerHTML = "<i>He was murdered? Marcus's brother?</i>"
+				document.getElementById("sprite").src = "";
+				document.getElementById("sprite").style.display = "none";
+				break;
+				case 9:
+				par[0].innerHTML = "Yes, just <em>2 days ago.</em> Up to now the police haven't figured out who or what killed him!"
+				document.getElementById("sprite").src = "../Sprites/Jessie/jessiethinking.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 10:
+				par[0].innerHTML = "And now all I want is to bring justice to my friend's death. Will you help me?"
+				document.getElementById("sprite").src = "../Sprites/Jessie/jessieangry.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 11:
+				par[0].innerHTML = "<i>(...)</i>"
+				document.getElementById("sprite").src = "";
+				document.getElementById("sprite").style.display = "none";
+				break;
+				case 12:
+				par[0].innerHTML = "Oh! Another yes! Thank you. I've hear you're good at sleuthing."
+				document.getElementById("sprite").src = "../Sprites/Jessie/jessiehappy.png"
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 13:
+				par[0].innerHTML = "<i>(I just like detective novels...)</i>"
+				document.getElementById("sprite").src = "";
+				document.getElementById("sprite").style.display = "none";
+				break;
+				case 14:
+				par[0].innerHTML = "Well, about the case, I've heard that the suspect is actually <em>one of the students here.</em>"
+				document.getElementById("sprite").src = "../Sprites/Jessie/jessiethinking.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 15:
+				par[0].innerHTML = "<i>One of the students!?</i>"
+				document.getElementById("sprite").src = "";
+				document.getElementById("sprite").style.display = "none";
+				break;
+				case 16:
+				par[0].innerHTML = "And what's worse is that you can see all the evidence up till now, in one of these rooms!"
+				document.getElementById("sprite").src = "../Sprites/Jessie/jessietalking.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 17:
+				par[0].innerHTML = "And that's why we're going to one of those rooms--to the Chem Lab."
+				document.getElementById("sprite").style.display = "block";
+				document.getElementById("sprite").src = "../Sprites/Jessie/jessietalking.png";
+				break;
+				case 18:
+				par[0].innerHTML = "<i>We're going there, right now?</i>"
+				document.getElementById("sprite").style.display = "none";
+				break;
+				case 19:
+				par[0].innerHTML = "The sooner the better!"
+				document.getElementById("sprite").src = "../Sprites/Jessie/jessiehappy.png";
+				document.body.style.backgroundImage="url(https://wallpaperscraft.com/image/class_desk_table_window_light_16736_1920x1080.png)"
+				document.getElementById("dialogue").style.display = "block"
+				document.getElementById("sprite").style.display = "block";
+				break;
+			}
+		}
+		var scene2 = function(){
+			switch(line){
+				case 20:
+				document.body.style.backgroundImage="url(https://www.biospectrumasia.com/uploads/articles/2-9602.jpg)"
+				par[0].innerHTML = ""
+				document.getElementById("sprite").style.display = "none";
+				break;
+				case 21:
+				document.body.style.backgroundImage="url(https://www.biospectrumasia.com/uploads/articles/2-9602.jpg)"
+				par[0].innerHTML = "So this is the Chemistry Lab. As you c--"
+				document.getElementById("sprite").style.display = "block";
+				document.getElementById("sprite").src = "../Sprites/Jessie/jessietalking.png";
+				break;
+				case 22:
+				par[0].innerHTML = "Hey!"
+				document.getElementById("sprite").src = "";
+				document.getElementById("sprite").style.display = "none";
+				break;
+				case 23:
+				par[0].innerHTML = "Jessie! Cora! What are you two doing here?"
+				document.getElementById("sprite").src = "../Sprites/Darla/darlatalking.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 24:
+				par[0].innerHTML = "Hey there, Darla. We were just talking about Nate's murder. Why are you here?"
+				document.getElementById("sprite").src = "../Sprites/Jessie/jessietalking.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 25:
+				par[0].innerHTML = "Well, <em>I left my scical here</em> when we were discussing stoichiometry, and now I'm looking for it."
+				document.getElementById("sprite").src = "../Sprites/Darla/darlasad.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 26:
+				par[0].innerHTML = "<i>As if you need it.</i>"
+				document.getElementById("sprite").src = "";
+				document.getElementById("sprite").style.display = "none";
+				break;
+				case 27:
+				par[0].innerHTML = "Hey! Even if I didn't need it, I'd still have to pay for it!"
+				document.getElementById("sprite").src = "../Sprites/Darla/darlasad.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 28:
+				par[0].innerHTML = "Buuut anyway, talking about the murder, aren't you guys not allowed here?"
+				document.getElementById("sprite").src = "../Sprites/Darla/darlathinking.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 29:
+				par[0].innerHTML = "Well, the police still haven't found who the culprit is, so we decided to take this matter into our own hands."
+				document.getElementById("sprite").src = "../Sprites/Jessie/jessie.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 30:
+				par[0].innerHTML = "Oh, I can't help you with that. <em>If you need help with numbers, just talk to me!</em>"
+				document.getElementById("sprite").src = "../Sprites/Darla/darlatalking.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 31:
+				par[0].innerHTML = "I'll leave now. Good luck with your investigation!"
+				document.getElementById("sprite").src = "../Sprites/Darla/darlatalking.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 32:
+				par[0].innerHTML = "<i>Darla left.</i>"
+				document.getElementById("sprite").src = "";
+				document.getElementById("sprite").style.display = "none";
+				break;
+				case 33:
+				par[0].innerHTML = "Hey, since no one's around, it wouldn't hurt to investigate, wouldn't it?"
+				document.getElementById("sprite").src = "../Sprites/Jessie/jessie.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+			}
+		}
+		var nextLine = function() {
+                line++;
+								if(line<=19){
+                	scene1();
+								}
+								else if(line>19 && line<=33){
+                	scene2();
+								}
+								else if(line==34){
+									window.location.href = "investigation1.html";
+								}
+            }
+		var prevLine = function() {
+                line = line - 1;
+								if(line<=19){
+                	scene1();
+								}
+								else if(line>19 && line<=33){
+                	scene2();
+								}
+            }
+	</script>
+<head>
+<body>
+	<img id="sprite" src="">
+	<div id="bottom">
+		<div id = "dialogue">
+		<p>...<p>
+			<img id="previous" src ="../Sprites/next.png">
+			<img id="next" src ="../Sprites/next.png">
+		</div>
+	</div>
+</body>
+<script>
+document.getElementById("previous").style.display = "none";
+document.getElementById("sprite").style.display = "none";
+	document.getElementById("previous").addEventListener("click", prevLine)
+	document.getElementById("next").addEventListener("click", nextLine)
+	document.onkeydown = checkKey;
+	function checkKey(e) {
+		e = e || window.event;
+		if (e.keyCode == '37') {
+			prevLine();
+		}
+		else if (e.keyCode == '39') {
+			nextLine();
+		}
+
+}
+</script>
+</html>

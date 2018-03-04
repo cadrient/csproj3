@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    $("#panel").click(function(){
+        $("#inventory").slideToggle("slow");
+    });
+  });
+  </script>
+  <style>
+  img{
+	  width:75px;
+    position:absolute;
+    bottom:80px;
+	}
+  #bp1{
+    position:absolute;
+    right:30px;
+  }
+  #kn1{
+    position:absolute;
+    right:180px;
+    bottom:250px;
+  }
+  #mi1{
+    position:absolute;
+    right:90px;
+    top:90px;
+  }
+  #bp2{
+    position:absolute;
+    left:630px;
+  }
+  #kn2{
+    position:absolute;
+    left:560px;
+    bottom:250px;
+  }
+  #mi2{
+    position:absolute;
+    right:90px;
+    top:180px;
+  }
+  #bp3{
+    position:absolute;
+    top:200px;
+    right:450px;
+  }
+  #kn3{
+    position:absolute;
+    left:280px;
+    top:250px;
+  }
+  #mi3{
+    position:absolute;
+    left:90px;
+    bottom:60px;
+  }
+  #panel{
+    padding: 5px;
+    text-align: center;
+    position:absolute;
+    height:80px;
+		left:5vw;
+		width:350px;
+		padding:20px;
+    background-color:lightpink;
+  }
+	#inventory{
+		background-color:hsla(349,100%,87%,0.6);
+		position:absolute;
+    top: 80px;
+		left:5vw;
+		overflow:auto;
+		width:350px;
+		height:80vh;
+		padding:30px;
+    display:none;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+	}
+  #inventory img{
+    float:left;
+  }
+  </style>
+</head>
+<body>
+
+<div class="container" id="main">
+  <img id ="bp1" src="https://png.pngtree.com/element_origin_min_pic/16/11/04/59a79d50e2e0bd65f807e6e2a2216470.jpg" onclick="moveButton(this)" data-placement="bottom" data-toggle="tooltip" title="Nate's backpack. He was said to have been killed with this on.">
+  <img id = "kn1" src="https://images-na.ssl-images-amazon.com/images/I/714tx9QbaKL._SL1500_.jpg" onclick="moveButton(this)" data-placement="bottom" data-toggle="tooltip" title="A microscope. Apparently several drops of blood were found, but it was not Nate's.">
+  <img id ="mi1" src="http://www.zombiesplayground.com/images/Product/large/RC-1053.png" onclick="moveButton(this)" data-placement="bottom" data-toggle="tooltip" title="A knife. So out of place!">
+  <img id = "bp2" src="https://png.pngtree.com/element_origin_min_pic/16/11/04/59a79d50e2e0bd65f807e6e2a2216470.jpg" onclick="moveButton(this)" data-placement="bottom" data-toggle="tooltip" title="Nate's backpack. He was said to have been killed with this on.">
+  <img id = "mi2" src="https://images-na.ssl-images-amazon.com/images/I/714tx9QbaKL._SL1500_.jpg" onclick="moveButton(this)" data-placement="bottom" data-toggle="tooltip" title="A microscope. Apparently several drops of blood were found, but it was not Nate's.">
+  <img id = "kn2" src="http://www.zombiesplayground.com/images/Product/large/RC-1053.png" onclick="moveButton(this)" data-placement="bottom" data-toggle="tooltip" title="A knife. So out of place!">
+  <img id = "bp3" src="https://png.pngtree.com/element_origin_min_pic/16/11/04/59a79d50e2e0bd65f807e6e2a2216470.jpg" onclick="moveButton(this)" data-placement="bottom" data-toggle="tooltip" title="Nate's backpack. He was said to have been killed with this on.">
+  <img id = "mi3" src="https://images-na.ssl-images-amazon.com/images/I/714tx9QbaKL._SL1500_.jpg" onclick="moveButton(this)" data-placement="bottom" data-toggle="tooltip" title="A microscope. Apparently several drops of blood were found, but it was not Nate's.">
+  <img id = "kn3" src="http://www.zombiesplayground.com/images/Product/large/RC-1053.png" onclick="moveButton(this)" data-placement="bottom" data-toggle="tooltip" title="A knife. So out of place!">
+</div>
+<div id ="panel"><h4>Inventory! </h4></div>
+<div id ="inventory"></div>
+
+<script>
+var x = document.getElementById("inventory").getElementsByTagName("img").length
+if(x>4){
+  alert("Inventory full!")
+}
+
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+
+function moveButton(elem){
+    if( $(elem).parent().attr("id") == "main" ){
+        $(elem).detach().appendTo('#inventory');
+    }
+    else{
+        $(elem).detach().appendTo('#main');
+    }
+}
+</script>
+
+</body>
+</html>
