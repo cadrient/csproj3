@@ -143,7 +143,6 @@ top: 428px;
 </head>
 <body>
 <script>
-<<<<<<< HEAD
     var audio = new Audio("../Music/danganrompa2.mp3");
     audio.addEventListener('ended', function() {
     this.currentTime = 0;
@@ -157,17 +156,6 @@ top: 428px;
     var resume = function(){
       audio.play();
     }
-=======
-var audio = new Audio("../Music/DANGANRONPA OST_ -1-05- Beautiful Dead.mp3");
-audio.play();
-audio.volume=0.05
-var mute = function(){
-  audio.pause();
-}
-var resume = function(){
-  audio.play();
-}
->>>>>>> e4dd7037e11973239ef161f744ab4bedb7d284cf
 		var par = document.getElementsByTagName("p")
 		var line = 0
 		var scene1 = function(){
@@ -550,7 +538,7 @@ document.getElementById("sprite").src = "../Sprites/Jessie/jessietalking.png";
 else{
    var x = document.getElementById("div1").getElementsByTagName("div")[9].appendChild(node10)
    x.setAttribute("id", "img10");
-   x.setAttribute("data-placement", "bottom");
+   x.setAttribute("data-placement", "top");
    x.setAttribute("data-toggle", "tooltip");
    x.setAttribute("title", "This must have been a girl’s! Oh wait. Black is a unisex color.");
    document.getElementById("slot10").style.display = "block";
@@ -587,11 +575,7 @@ function checkKey(e) {
     nextLine();
   }
   else if (e.keyCode =='77'){
-<<<<<<< HEAD
     if (m%2==0){
-=======
-    if (m%2==0){ 
->>>>>>> e4dd7037e11973239ef161f744ab4bedb7d284cf
       mute();
       m++;
     }
@@ -622,7 +606,7 @@ function checkKey(e) {
 <img id = "move7" src = "../ADTECH ITEMS/pouchSMALL.png" data-placement="bottom" data-toggle="tooltip" title="A pouch with SD cards in them.  The SD Cards are spares, labeled N.T., while the pouch is labeled Marcus Telosa.">
 <img id = "move8" src = "../ADTECH ITEMS/bagSMALL.png" data-placement="bottom" data-toggle="tooltip" title="Darla’s bag. Suspiciously stained red near the underside. The stains smells ….strange.">
 <img id = "move9" src = "../ADTECH ITEMS/lunchSMALL.png" data-placement="bottom" data-toggle="tooltip" title="Darla’s lunch bag. It contains some left over spaghetti, staining some of the bag with red.">
-<img id = "move10" src = "../ADTECH ITEMS/watchSMALL.png" data-placement="bottom" data-toggle="tooltip" title="This must have been a girl’s! Oh wait. Black is a unisex color.">
+<img id = "move10" src = "../ADTECH ITEMS/watchSMALL.png" data-placement="top" data-toggle="tooltip" title="This must have been a girl’s! Oh wait. Black is a unisex color.">
 <div id="div1">
 <div id = "slot1"></div>
 <div id = "slot2"></div>
