@@ -1,0 +1,52 @@
+<DOCTYPE! html>
+<head>
+<title>BLEH LOSER!!11!</title>
+<style>
+div {
+	font-weight:bold;
+	font-family:comic sans ms;
+	color: cyan;
+	font-size:50px;
+	text-align:center;	
+}
+button {
+	font-family:comic sans ms;
+	color:white;
+	font-weight:bold;
+    background-color: #4CAF50;
+    border: none;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+	border-radius:5px;
+}
+button:hover {
+    background-color: red;
+}
+button:active{
+	background-color: cyan;
+}
+body{
+	background-color:yellow;
+}
+</style>
+</head>
+
+<body>
+	<div>
+	<h1>LOOOSSEERRRR U PICKED D RONNG MURDRER !!! >:P<br>Click button to go back ya loser >:)</h1>
+	<button id="reset">reset</button>
+	</div>
+</body>
+<script>
+	var toMenu = function(){
+		window.location.href="titlescreen.html";
+	}
+	document.getElementById("reset").addEventListener("click", toMenu)
+</script>
+</html>
