@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:900" rel="stylesheet">
+	<link rel="stylesheet" href="../CSS/main.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<style>
+		body{
+			background-size: cover;
+			margin: 0px;
+			background-image: url(http://bhavansabudhabi.com/wp-content/uploads/2016/01/DSC0106-1024x683.jpg);
+		}
+		#btns{
+			padding:5px;
+		}
+		#btns button {
+			font-family: "Linowrite";
+			background-color: #4CAF50;
+			border: 1px solid green;
+			color: white;
+			padding: 15px 27px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			cursor: pointer;
+			width: 150px;
+			display: block;
+			transition:0.2s;
+			border-radius: 5px;
+		}
+
+		#btns button:not(:last-child) {
+			border-bottom: none;
+		}
+		#btns button:hover{
+			background-color:red;
+		}
+	</style>
+	<script>
+		var par = document.getElementsByTagName("p")
+		var line = 0;
+		var scene1 = function(){
+			switch(line){
+				case 0:
+				par[0].innerHTML = "Hmm.. The murder could have been anyone!"
+				document.getElementById("previous").style.display = "none";
+				document.getElementById("sprite").src = "../Sprites/Jessie/jessiethinking.png";
+				break;
+				case 1:
+				document.getElementById("previous").style.display = "block"
+				par[0].innerHTML = "Since you're the one who's into these detective games and such."
+				document.getElementById("sprite").src = "../Sprites/Jessie/jessiesmile.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 2:
+				par[0].innerHTML = "I want you to be the one to guess who the murderer is!"
+				document.getElementById("sprite").src = "../Sprites/Jessie/jessiehappy.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 3:
+				par[0].innerHTML = "After all, I'm a journalist, not Sherlock Holmes."
+				document.getElementById("sprite").src = "../Sprites/Jessie/jessietalking.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 4:
+				par[0].innerHTML = "So after gathering all this evidence..."
+				document.getElementById("sprite").src = "../Sprites/Jessie/jessie.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 5:
+				par[0].innerHTML = "It's up to you to figure out who the real murderer is!"
+				document.getElementById("sprite").src = "../Sprites/Jessie/jessiehappy.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 6:
+				par[0].innerHTML = "<i>(Me?!?)</i>"
+				document.getElementById("sprite").src = "";
+				document.getElementById("sprite").style.display = "none";
+				break;
+				case 7:
+				par[0].innerHTML = "Yes! You!"
+				document.getElementById("sprite").src = "../Sprites/Jessie/jessiesmile.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 8:
+				par[0].innerHTML = "Now, who among these three could it be?"
+				document.getElementById("sprite").src = "../Sprites/Jessie/jessiethinking.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 9:
+				par[0].innerHTML = "<i>(Hmm...)</i>"
+				document.getElementById("sprite").src = "";
+				document.getElementById("sprite").style.display = "none";
+				break;
+				
+			}
+		}
+		var guess = function(){
+			switch(line){
+				case 10:
+				par[0].innerHTML = "So who could it be?"
+				document.getElementById("sprite").src = "../Sprites/Jessie/jessiethinking.png";
+				document.getElementById("sprite").style.display = "none";
+				break;
+				case 11:
+				par[0].innerHTML = "Marcus Telosa, Nate's less popular older brother, whose <em>laptop was suspiciously in the crime scene</em>."
+				document.getElementById("sprite").src = "../Sprites/Mark/MarkNeutral.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 12:
+				par[0].innerHTML = "A CompSci lord who seems to be super religious."
+				document.getElementById("sprite").src = "../Sprites/Mark/MarkNervous.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 13:
+				par[0].innerHTML = "Sophie Dela Cruz, angry at Nate for <em>posting an embarasssing picture</em> of her."
+				document.getElementById("sprite").src = "../Sprites/Sophie/sophie.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 14:
+				par[0].innerHTML = "She also seemed suspiciously nervous about the topic."
+				document.getElementById("sprite").src = "../Sprites/Sophie/sophieblushing.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 15:
+				par[0].innerHTML = "Darla, the math lord who was Nate's stat groupmate."
+				document.getElementById("sprite").src = "../Sprites/Darla/darla.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 16:
+				par[0].innerHTML = "She commented that <em>he was not of great help</em> during the night of their stat project submission."
+				document.getElementById("sprite").src = "../Sprites/Darla/darlasad.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+				case 17:
+				par[0].innerHTML = "So, who would you accuse?"
+				document.getElementById("sprite").src = "../Sprites/Jessie/jessiethinking.png";
+				document.getElementById("sprite").style.display = "block";
+				break;
+			}
+		}
+		var accuse = function() {
+		do{
+			var accused = prompt("Who do you accuse", "Options: Marcus, Sophie, Darla, Jessie, or yourself(??)")
+			while(accused=="Marcus"||accused=="Darla"){
+					accused = prompt("I don't think so... The evidence points elsewhere...", "Again, options: Marcus, Sophie, Darla, Jessie, or yourself?")
+			}
+			while(accused!="Marcus"&&accused!="Darla"&&accused!="Sophie"&&accused!="Jessie"&&accused!="You"&&accused!="you"&&accused!="Me"&&accused!="me"&&accused!="Myself"&&accused!="myself"){
+				accused = prompt("Who is that? Mind your capitalisation and spelling. I am not part of the literature club for nothing.", "Again, optioins: Marcus, Sophie, Darla, Jessie, or yourself?")
+			}
+			if(accused=="Jessie"||accused=="You"||accused=="you"){
+					alert("You will pay for this.")
+					par[0].innerHTML = "<em>ME???!?!? IMPOSSIBLE!!!!! I WOULD NEVER!!!</em>"
+					document.getElementById("sprite").src = "../Sprites/Jessie/jessieangry.png";
+					document.getElementById("sprite").style.display = "block";
+					window.close();
+			}
+			else if(accused=="Me"||accused=="me"||accused=="Myself"||accused=="myself"){
+					par[0].innerHTML = "<em>YOU?!?!?!?! YOU MONSTER! H-H-HOW COULD YOU?!?!? YOU WILL PAY FOR THIS</em>"
+					document.getElementById("sprite").src = "";
+					document.getElementById("sprite").style.display = "none";
+					for(var i=0; i==i; i++){
+						alert("YOU MONSTER");
+					}
+			}
+		}while(accused!="Sophie"&&accused!=Jessie&&accused!="You"&&accused!="you"&&accused!="Me"&&accused!="me"&&accused!="Myself"&&accused!="myself")
+		if(accused=="Sophie"){
+				par[0].innerHTML = "Congratulations!!! She indeed was the murderer!!!"
+				document.getElementById("sprite").src = "../Sprites/Jessie/jessiehappy.png";
+				document.getElementById("sprite").style.display = "block";
+				document.getElementById("next").style.display = "none";
+			}
+		}
+	</script>
+<head>
+<body>
+	<img id="sprite" src="../Sprites/Jessie/jessiethinking.png">
+	<div id="btns">
+	</div>
+	<div id="bottom">
+		<div id = "dialogue">
+		<p>Hmm... The murderer could have been anyone!<p>
+			<img id="previous" src ="../Sprites/next.png">
+			<img id="next" src ="../Sprites/next.png">
+		</div>
+	</div>
+</body>
+<script>
+		var nextLine = function() {
+			if(line<18){
+				line++;
+			}
+			if(line<=9){
+               	scene1();
+			}
+			else if(line>9 && line<=17){
+               	guess();
+			}
+			else if(line==18){
+               	accuse();
+			}		
+        }
+		var prevLine = function() {
+			if(line<18){
+				line = line - 1;
+			}
+			if(line<=9){
+				scene1();
+			}
+			else if(line>9 && line<=17){
+               	guess();
+			}
+			else if(line==18){
+               	accuse();
+			}
+        }
+	document.getElementById("previous").style.display = "none";
+	document.getElementById("sprite").style.display = "block";
+	document.getElementById("previous").addEventListener("click", prevLine)
+	document.getElementById("next").addEventListener("click", nextLine)
+	document.onkeydown = checkKey;
+	function checkKey(e) {
+		e = e || window.event;
+		if (e.keyCode == '37') {
+			prevLine();
+		}
+		else if (e.keyCode == '39') {
+			nextLine();
+		}
+}
+</script>
+</html>
