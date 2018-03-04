@@ -142,15 +142,15 @@ top: 428px;
 </head>
 <body>
 <script>
-var audio2 = new Audio("../Music/DANGANRONPA OST_ -1-08- BOX 15.mp3");
-audio2.play();
-audio2.volume=0.05
-var mute = function(){
-  audio2.pause();
-}
-var resume = function(){
-  audio2.play();
-}
+    var audio = new Audio("../Music/danganrompa.mp3");
+    audio.play();
+    audio.volume=0.075
+    var mute = function(){
+      audio.pause();
+    }
+    var resume = function(){
+      audio.play();
+    }
 		var par = document.getElementsByTagName("p")
 		var line = 0
 		var scene1 = function(){
@@ -660,6 +660,7 @@ par[0].innerHTML = "I don't think you can accuse anyone with that...keep looking
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();
 });
+
 
 </script>
 </body>
