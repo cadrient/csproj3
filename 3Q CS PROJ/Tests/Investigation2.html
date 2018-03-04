@@ -143,6 +143,7 @@ top: 428px;
 </head>
 <body>
 <script>
+<<<<<<< HEAD
     var audio = new Audio("../Music/danganrompa2.mp3");
     audio.addEventListener('ended', function() {
     this.currentTime = 0;
@@ -156,6 +157,17 @@ top: 428px;
     var resume = function(){
       audio.play();
     }
+=======
+var audio = new Audio("../Music/DANGANRONPA OST_ -1-05- Beautiful Dead.mp3");
+audio.play();
+audio.volume=0.05
+var mute = function(){
+  audio.pause();
+}
+var resume = function(){
+  audio.play();
+}
+>>>>>>> e4dd7037e11973239ef161f744ab4bedb7d284cf
 		var par = document.getElementsByTagName("p")
 		var line = 0
 		var scene1 = function(){
@@ -575,7 +587,11 @@ function checkKey(e) {
     nextLine();
   }
   else if (e.keyCode =='77'){
+<<<<<<< HEAD
     if (m%2==0){
+=======
+    if (m%2==0){ 
+>>>>>>> e4dd7037e11973239ef161f744ab4bedb7d284cf
       mute();
       m++;
     }
