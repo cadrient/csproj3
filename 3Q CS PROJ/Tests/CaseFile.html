@@ -5,29 +5,44 @@
 	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:900" rel="stylesheet">
 	<link rel="stylesheet" href="../CSS/main.css">
+	<script>
+	var audio = new Audio("../Music/danganrompa3.mp3");
+	audio.addEventListener('ended', function() {
+	this.currentTime = 0;
+	this.play();
+	}, false);
+	audio.play();
+	audio.volume=0.075
+	var mute = function(){
+		audio.pause();
+	}
+	var resume = function(){
+		audio.play();
+	}
+	</script>
 	<style>
 		body{
 			background-size: cover;
 			margin: 0px;
 			background-image: url(https://wallpaperscraft.com/image/class_desk_table_window_light_16736_1920x1080.png);
 		}
-		
+
 		#dialogue{
 		height: 70.5vh;
 		}
-		
+
 		img{
 		border: 5px solid #ff0000;
 		max-width: 40%;
 		height: auto;
 		float: left;
 		}
-		
+
 		p{
 		text-align: left;
 		margin-left: 10px;
 		}
-		
+
 	</style>
 <head>
 <body>
@@ -40,11 +55,34 @@
 		<p style = "text-align: left;">The murder of Nate Telosa in the AdTech Lab on April 20 </p>
 		<p style = "color: red; margin-left: 30px;">MOTIVE: </p>
 		<p style = "text-align: left;">Embarassing pictures of Sophie doing Yoga were found on Nate Telosa's smashed camera. </p>
-		<p style = "color: red; margin-left: 30px;">FIRST RPEORTED BY: </p>
+		<p style = "color: red; margin-left: 30px;">FIRST REPORTED BY: </p>
 		<p style = "text-align: left;">Jessie Sy and Cora Pangenon of Filipino Highschool for The Sciences and Arts </p>
 
-		
+
 		</div>
 	</div>
 </body>
+<script>
+document.onkeydown = checkKey;
+var m=0;
+function checkKey(e) {
+	e = e || window.event;
+	if (e.keyCode == '37') {
+		prevLine();
+	}
+	else if (e.keyCode == '39') {
+		nextLine();
+	}
+	else if (e.keyCode =='77'){
+		if (m%2==0){
+			mute();
+			m++;
+		}
+		else if (m%2==1){
+			resume();
+			m++;
+		}
+	}
+}
+</script>
 </html>

@@ -4,7 +4,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:900" rel="stylesheet">
 	<link rel="stylesheet" href="../CSS/main.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+	</script>
 	<style>
 		body{
 			background-size: cover;
@@ -94,7 +95,7 @@
 				document.getElementById("sprite").src = "";
 				document.getElementById("sprite").style.display = "none";
 				break;
-				
+
 			}
 		}
 		var guess = function(){
@@ -186,6 +187,19 @@
 	</div>
 </body>
 <script>
+var audio = new Audio("../Music/abella.mp3");
+audio.addEventListener('ended', function() {
+this.currentTime = 0;
+this.play();
+}, false);
+audio.play();
+audio.volume=0.055
+var mute = function(){
+	audio.pause();
+}
+var resume = function(){
+	audio.play();
+}
 		var nextLine = function() {
 			if(line<18){
 				line++;
@@ -198,7 +212,7 @@
 			}
 			else if(line==18){
                	accuse();
-			}		
+			}
         }
 		var prevLine = function() {
 			if(line<18){
@@ -218,15 +232,26 @@
 	document.getElementById("sprite").style.display = "block";
 	document.getElementById("previous").addEventListener("click", prevLine)
 	document.getElementById("next").addEventListener("click", nextLine)
-	document.onkeydown = checkKey;
-	function checkKey(e) {
-		e = e || window.event;
-		if (e.keyCode == '37') {
-			prevLine();
+document.onkeydown = checkKey;
+var m=0;
+function checkKey(e) {
+	e = e || window.event;
+	if (e.keyCode == '37') {
+		prevLine();
+	}
+	else if (e.keyCode == '39') {
+		nextLine();
+	}
+	else if (e.keyCode =='77'){
+		if (m%2==0){
+			mute();
+			m++;
 		}
-		else if (e.keyCode == '39') {
-			nextLine();
+		else if (m%2==1){
+			resume();
+			m++;
 		}
+	}
 }
 </script>
 </html>

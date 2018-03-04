@@ -26,7 +26,6 @@ background-size: 1600px 925px;
   float: left;
   display: block;
 }
-
 #move1{
 top: 370px;
 left: 1500px;
@@ -68,7 +67,6 @@ left: 150px;
 top: 820px;
 left: 400px;
 }
-
 #item{
 border: 1px solid #aaaaaa;
   width: 700px;
@@ -77,11 +75,9 @@ border: 1px solid #aaaaaa;
 #inv{
 z-index: -99;
 }
-
 #slot1, #slot2, #slot3, #slot4, #slot5{
 display: block;
 }
-
 #slot1, #slot2, #slot3, #slot4, #slot5, #slot6, #slot7, #slot8, #slot9, #slot10{
 position: absolute;
 float: left;
@@ -90,57 +86,44 @@ height: 95px;
 width: 100px;
 border: 1px solid #e75480;
 }
-
 #slot6, #slot7, #slot8, #slot9, #slot10{
 display: none;
 }
-
 #slot1{
 top: 48px;
 }
-
 #slot2{
 top: 143px;
 }
-
 #slot3{
 top: 238px;
 }
-
 #slot4{
 top: 333px;
 }
-
 #slot5{
 top: 428px;
 }
-
 #slot6{
 top: 48px;
 }
-
 #slot7{
 top: 143px;
 }
-
 #slot8{
 top: 238px;
 }
-
 #slot9{
 top: 333px;
 }
-
 #slot10{
 top: 428px;
 }
-
 
 		#dialogue{
 		display: none;
 		z-index: 999999999999999999999999999999999;
 		}
-
     #next2{
       display:none;
 			position: absolute;
@@ -150,11 +133,9 @@ top: 428px;
 			height: 30px;
 			border-radius: 50%;
 		}
-
 		#sprite {
 			display: none;
 			}
-
 		#check2{
 		display: none;
 		}
@@ -162,7 +143,7 @@ top: 428px;
 </head>
 <body>
 <script>
-    var audio = new Audio("../Music/danganrompa.mp3");
+    var audio = new Audio("../Music/danganrompa2.mp3");
     audio.addEventListener('ended', function() {
     this.currentTime = 0;
     this.play();
@@ -200,20 +181,16 @@ top: 428px;
 				document.getElementById("sprite").style.display = "none"
 				document.getElementById("check2").style.display = "block"
 				break;
-
 			}
 		}
 		var nextLine = function() {
                 document.getElementById("dialogue").style.display = "none"
                 document.getElementById("sprite").style.display = "none"
             }
-
 		var notComplete = function() {
 		document.getElementById("dialogue").style.display = "none"
 		document.getElementById("sprite").style.display = "none"
 		}
-
-
 var node = document.createElement("img");
 node.src = "../ADTECH ITEMS/cameraSMALL.png"
 var node2 = document.createElement("img");
@@ -234,11 +211,9 @@ var node9 = document.createElement("img");
 node9.src = "../ADTECH ITEMS/lunchSMALL.png"
 var node10 = document.createElement("img");
 node10.src = "../ADTECH ITEMS/watchSMALL.png"
-
 var nextPage = function() {
 window.location.href = "accusation.html"
 }
-
 var toInventory = function(){
      $(document).ready(function(){
 if ( $("#slot6").children().length > 0 ){
@@ -256,7 +231,6 @@ else{
 }
 });
 }
-
    var takenAway = function(){
        $(document).ready(function(){
 if ( $("#slot6").children().length > 0 ){
@@ -266,16 +240,13 @@ document.getElementById("move1").style.display = "none";
 }
 });
 }
-
 var returnBack = function(){
 var list = document.getElementById("slot1");
 list.removeChild(list.firstChild);
 }
-
 var originalPlace = function(){
 document.getElementById("move1").style.display = "block";
 }
-
 var toInventory2 = function(){
       $(document).ready(function(){
 if ( $("#slot7").children().length > 0 ){
@@ -293,7 +264,6 @@ else{
 }
 });
    }
-
 var takenAway2 = function(){
       $(document).ready(function(){
 if ( $("#slot7").children().length > 0 ){
@@ -303,17 +273,13 @@ document.getElementById("move2").style.display = "none";
 }
 });
 }
-
-
 var returnBack2 = function(){
 var list = document.getElementById("slot2");
 list.removeChild(list.firstChild);
 }
-
 var originalPlace2 = function(){
 document.getElementById("move2").style.display = "block";
 }
-
 var toInventory3 = function(){
       $(document).ready(function(){
 if ( $("#slot8").children().length > 0 ){
@@ -331,7 +297,6 @@ else{
 }
 });
    }
-
 var takenAway3 = function(){
       $(document).ready(function(){
 if ( $("#slot8").children().length > 0 ){
@@ -341,17 +306,13 @@ document.getElementById("move3").style.display = "none";
 }
 });
 }
-
-
 var returnBack3 = function(){
 var list = document.getElementById("slot3");
 list.removeChild(list.childNodes[0]);
 }
-
 var originalPlace3 = function(){
 document.getElementById("move3").style.display = "block";
 }
-
 var toInventory4 = function(){
       $(document).ready(function(){
 if ( $("#slot9").children().length > 0 ){
@@ -369,7 +330,6 @@ else{
 }
 });
    }
-
 var takenAway4 = function(){
       $(document).ready(function(){
 if ( $("#slot9").children().length > 0 ){
@@ -379,17 +339,13 @@ document.getElementById("move4").style.display = "none";
 }
 });
 }
-
-
 var returnBack4 = function(){
 var list = document.getElementById("slot4");
 list.removeChild(list.firstChild);
 }
-
 var originalPlace4 = function(){
 document.getElementById("move4").style.display = "block";
 }
-
 var toInventory5 = function(){
       $(document).ready(function(){
 if ( $("#slot10").children().length > 0 ){
@@ -407,7 +363,6 @@ else{
 }
 });
    }
-
 var takenAway5 = function(){
       $(document).ready(function(){
 if ( $("#slot10").children().length > 0 ){
@@ -417,17 +372,13 @@ document.getElementById("move5").style.display = "none";
 }
 });
 }
-
-
 var returnBack5 = function(){
 var list = document.getElementById("slot5");
 list.removeChild(list.firstChild);
 }
-
 var originalPlace5 = function(){
 document.getElementById("move5").style.display = "block";
 }
-
 var toInventory6 = function(){
       $(document).ready(function(){
 if ( $("#slot1").children().length > 0 ){
@@ -447,7 +398,6 @@ else{
 }
 });
    }
-
 var takenAway6 = function(){
       $(document).ready(function(){
 if ( $("#slot1").children().length > 0 ){
@@ -457,19 +407,15 @@ document.getElementById("move6").style.display = "none";
 }
 });
 }
-
-
 var returnBack6 = function(){
 var list = document.getElementById("slot6");
 list.removeChild(list.firstChild);
 }
-
 var originalPlace6 = function(){
 document.getElementById("move6").style.display = "block";
 document.getElementById("slot6").style.display = "none";
 document.getElementById("slot1").style.display = "block";
 }
-
 var toInventory7 = function(){
       $(document).ready(function(){
 if ( $("#slot2").children().length > 0 ){
@@ -489,7 +435,6 @@ else{
 }
 });
    }
-
 var takenAway7 = function(){
     $(document).ready(function(){
 if ( $("#slot2").children().length > 0 ){
@@ -499,13 +444,10 @@ document.getElementById("move7").style.display = "none";
 }
 });
 }
-
-
 var returnBack7 = function(){
 var list = document.getElementById("slot7");
 list.removeChild(list.firstChild);
 }
-
 var originalPlace7 = function(){
 document.getElementById("move7").style.display = "block";
 document.getElementById("slot7").style.display = "none";
@@ -530,7 +472,6 @@ else{
 }
 });
    }
-
 var takenAway8 = function(){
       $(document).ready(function(){
 if ( $("#slot3").children().length > 0 ){
@@ -540,13 +481,10 @@ document.getElementById("move8").style.display = "none";
 }
 });
 }
-
-
 var returnBack8 = function(){
 var list = document.getElementById("slot8");
 list.removeChild(list.childNodes[0]);
 }
-
 var originalPlace8 = function(){
 document.getElementById("move8").style.display = "block";
 document.getElementById("slot8").style.display = "none";
@@ -571,7 +509,6 @@ else{
 }
 });
    }
-
 var takenAway9 = function(){
       $(document).ready(function(){
 if ( $("#slot4").children().length > 0 ){
@@ -581,19 +518,15 @@ document.getElementById("move9").style.display = "none";
 }
 });
 }
-
-
 var returnBack9 = function(){
 var list = document.getElementById("slot9");
 list.removeChild(list.firstChild);
 }
-
 var originalPlace9 = function(){
 document.getElementById("move9").style.display = "block";
 document.getElementById("slot9").style.display = "none";
 document.getElementById("slot4").style.display = "block";
 }
-
 var toInventory10 = function(){
       $(document).ready(function(){
 if ( $("#slot5").children().length > 0 ){
@@ -605,7 +538,7 @@ document.getElementById("sprite").src = "../Sprites/Jessie/jessietalking.png";
 else{
    var x = document.getElementById("div1").getElementsByTagName("div")[9].appendChild(node10)
    x.setAttribute("id", "img10");
-   x.setAttribute("data-placement", "top");
+   x.setAttribute("data-placement", "bottom");
    x.setAttribute("data-toggle", "tooltip");
    x.setAttribute("title", "This must have been a girl’s! Oh wait. Black is a unisex color.");
    document.getElementById("slot10").style.display = "block";
@@ -613,7 +546,6 @@ else{
 }
 });
    }
-
 var takenAway10 = function(){
      $(document).ready(function(){
 if ( $("#slot5").children().length > 0 ){
@@ -623,17 +555,35 @@ document.getElementById("move10").style.display = "none";
 }
 });
 }
-
-
 var returnBack10 = function(){
 var list = document.getElementById("slot10");
 list.removeChild(list.firstChild);
 }
-
 var originalPlace10 = function(){
 document.getElementById("move10").style.display = "block";
 document.getElementById("slot10").style.display = "none";
 document.getElementById("slot5").style.display = "block";
+}
+document.onkeydown = checkKey;
+var m=0;
+function checkKey(e) {
+  e = e || window.event;
+  if (e.keyCode == '37') {
+    prevLine();
+  }
+  else if (e.keyCode == '39') {
+    nextLine();
+  }
+  else if (e.keyCode =='77'){
+    if (m%2==0){
+      mute();
+      m++;
+    }
+    else if (m%2==1){
+      resume();
+      m++;
+    }
+  }
 }
 </script>
 	<img id="sprite" src="../Sprites/Darla/darla.jpg">
@@ -656,7 +606,7 @@ document.getElementById("slot5").style.display = "block";
 <img id = "move7" src = "../ADTECH ITEMS/pouchSMALL.png" data-placement="bottom" data-toggle="tooltip" title="A pouch with SD cards in them.  The SD Cards are spares, labeled N.T., while the pouch is labeled Marcus Telosa.">
 <img id = "move8" src = "../ADTECH ITEMS/bagSMALL.png" data-placement="bottom" data-toggle="tooltip" title="Darla’s bag. Suspiciously stained red near the underside. The stains smells ….strange.">
 <img id = "move9" src = "../ADTECH ITEMS/lunchSMALL.png" data-placement="bottom" data-toggle="tooltip" title="Darla’s lunch bag. It contains some left over spaghetti, staining some of the bag with red.">
-<img id = "move10" src = "../ADTECH ITEMS/watchSMALL.png" data-placement="top" data-toggle="tooltip" title="This must have been a girl’s! Oh wait. Black is a unisex color.">
+<img id = "move10" src = "../ADTECH ITEMS/watchSMALL.png" data-placement="bottom" data-toggle="tooltip" title="This must have been a girl’s! Oh wait. Black is a unisex color.">
 <div id="div1">
 <div id = "slot1"></div>
 <div id = "slot2"></div>
@@ -693,8 +643,6 @@ document.getElementById("move10").addEventListener("click", function(){takenAway
 document.getElementById("slot10").addEventListener("dblclick", function(){returnBack10(); originalPlace10()})
 document.getElementById("next").addEventListener("click", nextLine)
 document.getElementById("next2").addEventListener("click", nextPage)
-
-
 $(document).ready(function(){
 $("#check").click(function(){
 if ($( "#slot1" ).find( "#img1" ).length > 0 && $( "#slot2" ).find( "#img2" ).length > 0  && $( "#slot3" ).find( "#img3" ).length > 0  && $( "#slot4" ).find( "#img4" ).length > 0  && $( "#slot5" ).find( "#img5" ).length > 0 ){
@@ -713,33 +661,9 @@ par[0].innerHTML = "I don't think you can accuse anyone with that...keep looking
 }
 });
 });
-
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();
 });
-
-document.onkeydown = checkKey;
-var m=0;
-function checkKey(e) {
-  e = e || window.event;
-  if (e.keyCode == '37') {
-    prevLine();
-  }
-  else if (e.keyCode == '39') {
-    nextLine();
-  }
-  else if (e.keyCode =='77'){
-    if (m%2==0){
-      mute();
-      m++;
-    }
-    else if (m%2==1){
-      resume();
-      m++;
-    }
-  }
-}
-
 </script>
 </body>
 </html>
