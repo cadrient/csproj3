@@ -134,7 +134,7 @@ top: 333px;
 #slot10{
 top: 428px;
 }
- 
+
 
 		#dialogue{
 		display: none;
@@ -231,7 +231,7 @@ var toInventory = function(){
 if ( $("#slot6").children().length > 0 ){
 document.getElementById("dialogue").style.display = "block"
 document.getElementById("sprite").style.display = "block"
-par[0].innerHTML = "Whoops! That inventory slot contains something. Try removing an item from slot 1." 
+par[0].innerHTML = "Whoops! That inventory slot contains something. Try removing an item from slot 1."
 document.getElementById("sprite").src = "../Sprites/Jessie/jessietalking.png";
 }
 else{
@@ -268,7 +268,7 @@ var toInventory2 = function(){
 if ( $("#slot7").children().length > 0 ){
 document.getElementById("dialogue").style.display = "block"
 document.getElementById("sprite").style.display = "block"
-par[0].innerHTML = "Whoops! That inventory slot contains something. Try removing an item from slot 2." 
+par[0].innerHTML = "Whoops! That inventory slot contains something. Try removing an item from slot 2."
 document.getElementById("sprite").src = "../Sprites/Jessie/jessietalking.png";
 }
 else{
@@ -306,7 +306,7 @@ var toInventory3 = function(){
 if ( $("#slot8").children().length > 0 ){
 document.getElementById("dialogue").style.display = "block"
 document.getElementById("sprite").style.display = "block"
-par[0].innerHTML = "Whoops! That inventory slot contains something. Try removing an item from slot 3." 
+par[0].innerHTML = "Whoops! That inventory slot contains something. Try removing an item from slot 3."
 document.getElementById("sprite").src = "../Sprites/Jessie/jessietalking.png";
 }
 else{
@@ -332,7 +332,7 @@ document.getElementById("move3").style.display = "none";
 
 var returnBack3 = function(){
 var list = document.getElementById("slot3");
-list.removeChild(list.childNodes[0]);  
+list.removeChild(list.childNodes[0]);
 }
 
 var originalPlace3 = function(){
@@ -344,7 +344,7 @@ var toInventory4 = function(){
 if ( $("#slot9").children().length > 0 ){
 document.getElementById("dialogue").style.display = "block"
 document.getElementById("sprite").style.display = "block"
-par[0].innerHTML = "Whoops! That inventory slot contains something. Try removing an item from slot 4." 
+par[0].innerHTML = "Whoops! That inventory slot contains something. Try removing an item from slot 4."
 document.getElementById("sprite").src = "../Sprites/Jessie/jessietalking.png";
 }
 else{
@@ -382,7 +382,7 @@ var toInventory5 = function(){
 if ( $("#slot10").children().length > 0 ){
 document.getElementById("dialogue").style.display = "block"
 document.getElementById("sprite").style.display = "block"
-par[0].innerHTML = "Whoops! That inventory slot contains something. Try removing an item from slot 5." 
+par[0].innerHTML = "Whoops! That inventory slot contains something. Try removing an item from slot 5."
 document.getElementById("sprite").src = "../Sprites/Jessie/jessietalking.png";
 }
 else{
@@ -420,7 +420,7 @@ var toInventory6 = function(){
 if ( $("#slot1").children().length > 0 ){
 document.getElementById("dialogue").style.display = "block"
 document.getElementById("sprite").style.display = "block"
-par[0].innerHTML = "Whoops! That inventory slot contains something. Try removing an item from slot 1." 
+par[0].innerHTML = "Whoops! That inventory slot contains something. Try removing an item from slot 1."
 document.getElementById("sprite").src = "../Sprites/Jessie/jessietalking.png";
 }
 else{
@@ -462,7 +462,7 @@ var toInventory7 = function(){
 if ( $("#slot2").children().length > 0 ){
 document.getElementById("dialogue").style.display = "block"
 document.getElementById("sprite").style.display = "block"
-par[0].innerHTML = "Whoops! That inventory slot contains something. Try removing an item from slot 2." 
+par[0].innerHTML = "Whoops! That inventory slot contains something. Try removing an item from slot 2."
 document.getElementById("sprite").src = "../Sprites/Jessie/jessietalking.png";
 }
 else{
@@ -503,7 +503,7 @@ var toInventory8 = function(){
 if ( $("#slot3").children().length > 0 ){
 document.getElementById("dialogue").style.display = "block"
 document.getElementById("sprite").style.display = "block"
-par[0].innerHTML = "Whoops! That inventory slot contains something. Try removing an item from slot 3." 
+par[0].innerHTML = "Whoops! That inventory slot contains something. Try removing an item from slot 3."
 document.getElementById("sprite").src = "../Sprites/Jessie/jessietalking.png";
 }
 else{
@@ -531,7 +531,7 @@ document.getElementById("move8").style.display = "none";
 
 var returnBack8 = function(){
 var list = document.getElementById("slot8");
-list.removeChild(list.childNodes[0]);  
+list.removeChild(list.childNodes[0]);
 }
 
 var originalPlace8 = function(){
@@ -544,7 +544,7 @@ var toInventory9 = function(){
 if ( $("#slot4").children().length > 0 ){
 document.getElementById("dialogue").style.display = "block"
 document.getElementById("sprite").style.display = "block"
-par[0].innerHTML = "Whoops! That inventory slot contains something.  Try removing an item from slot 4." 
+par[0].innerHTML = "Whoops! That inventory slot contains something.  Try removing an item from slot 4."
 document.getElementById("sprite").src = "../Sprites/Jessie/jessietalking.png";
 }
 else{
@@ -586,13 +586,13 @@ var toInventory10 = function(){
 if ( $("#slot5").children().length > 0 ){
 document.getElementById("dialogue").style.display = "block"
 document.getElementById("sprite").style.display = "block"
-par[0].innerHTML = "Whoops! That inventory slot contains something. Try removing an item from slot 5." 
+par[0].innerHTML = "Whoops! That inventory slot contains something. Try removing an item from slot 5."
 document.getElementById("sprite").src = "../Sprites/Jessie/jessietalking.png";
 }
 else{
    var x = document.getElementById("div1").getElementsByTagName("div")[9].appendChild(node10)
    x.setAttribute("id", "img10");
-   x.setAttribute("data-placement", "bottom");
+   x.setAttribute("data-placement", "top");
    x.setAttribute("data-toggle", "tooltip");
    x.setAttribute("title", "This must have been a girl’s! Oh wait. Black is a unisex color.");
    document.getElementById("slot10").style.display = "block";
@@ -643,7 +643,7 @@ document.getElementById("slot5").style.display = "block";
 <img id = "move7" src = "../ADTECH ITEMS/pouchSMALL.png" data-placement="bottom" data-toggle="tooltip" title="A pouch with SD cards in them.  The SD Cards are spares, labeled N.T., while the pouch is labeled Marcus Telosa.">
 <img id = "move8" src = "../ADTECH ITEMS/bagSMALL.png" data-placement="bottom" data-toggle="tooltip" title="Darla’s bag. Suspiciously stained red near the underside. The stains smells ….strange.">
 <img id = "move9" src = "../ADTECH ITEMS/lunchSMALL.png" data-placement="bottom" data-toggle="tooltip" title="Darla’s lunch bag. It contains some left over spaghetti, staining some of the bag with red.">
-<img id = "move10" src = "../ADTECH ITEMS/watchSMALL.png" data-placement="bottom" data-toggle="tooltip" title="This must have been a girl’s! Oh wait. Black is a unisex color.">
+<img id = "move10" src = "../ADTECH ITEMS/watchSMALL.png" data-placement="top" data-toggle="tooltip" title="This must have been a girl’s! Oh wait. Black is a unisex color.">
 <div id="div1">
 <div id = "slot1"></div>
 <div id = "slot2"></div>
