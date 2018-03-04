@@ -13,6 +13,16 @@
 		}
 	</style>
 	<script>
+	window.alert("Controls:\nleft/right arrow keys/buttons: navigate\n'm': mute/play music\nclick: add in inventory\ndouble-click: remove from inventory")
+	var audio = new Audio("../Music/Professor Layton & The Curious Village Soundtrack - Layton's Theme.mp3");
+  audio.play();
+	audio.volume=0.075
+	var mute = function(){
+		audio.pause();
+	}
+	var resume = function(){
+		audio.play();
+	}
 		var par = document.getElementsByTagName("p")
 		var line = 0
 		var scene1 = function(){
@@ -236,6 +246,7 @@ document.getElementById("sprite").style.display = "none";
 	document.getElementById("previous").addEventListener("click", prevLine)
 	document.getElementById("next").addEventListener("click", nextLine)
 	document.onkeydown = checkKey;
+	var m=0;
 	function checkKey(e) {
 		e = e || window.event;
 		if (e.keyCode == '37') {
@@ -244,7 +255,16 @@ document.getElementById("sprite").style.display = "none";
 		else if (e.keyCode == '39') {
 			nextLine();
 		}
-
+		else if (e.keyCode =='77'){
+			if (m%2==0){
+				mute();
+				m++;
+			}
+			else if (m%2==1){
+				resume();
+				m++;
+			}
+		}
 }
 </script>
 </html>
