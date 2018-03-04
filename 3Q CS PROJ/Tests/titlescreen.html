@@ -55,6 +55,9 @@
 		var play = function(){
 			window.location.href="dialogue1.html"
 		}
+		var credit = function(){
+			window.location.href="credits.html"
+		}
 	</script>
 <head>
 <body>
@@ -71,7 +74,9 @@
 	document.getElementsByTagName("p")[0].addEventListener("click", play)
 	document.getElementsByTagName("p")[1].addEventListener("mouseover", hover2)
 	document.getElementsByTagName("p")[1].addEventListener("mouseleave", leave2)
+	document.getElementsByTagName("p")[1].addEventListener("click", play)
 	document.getElementsByTagName("p")[2].addEventListener("mouseover", hover3)
 	document.getElementsByTagName("p")[2].addEventListener("mouseleave", leave3)
+	document.getElementsByTagName("p")[2].addEventListener("click", credit)
 </script>
 </html>
