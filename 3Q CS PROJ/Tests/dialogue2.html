@@ -20,6 +20,12 @@
 		}, false);
 		audio.play();
 		audio.volume=0.055;
+		var mute = function(){
+			audio.pause();
+		}
+		var resume = function(){
+			audio.play();
+		}
 		var par = document.getElementsByTagName("p")
 		var line = 0
 		var scene1 = function(){
@@ -304,6 +310,7 @@ document.getElementById("sprite").style.display = "block";
 	document.getElementById("previous").addEventListener("click", prevLine)
 	document.getElementById("next").addEventListener("click", nextLine)
 	document.onkeydown = checkKey;
+	var m=0;
 	function checkKey(e) {
 		e = e || window.event;
 		if (e.keyCode == '37') {
@@ -312,7 +319,16 @@ document.getElementById("sprite").style.display = "block";
 		else if (e.keyCode == '39') {
 			nextLine();
 		}
-
+		else if (e.keyCode =='77'){
+			if (m%2==0){
+				mute();
+				m++;
+			}
+			else if (m%2==1){
+				resume();
+				m++;
+			}
+		}
 }
 </script>
 </html>
