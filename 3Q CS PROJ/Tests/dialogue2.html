@@ -1,4 +1,4 @@
-<!--insert investigation html @ line 264 (replace "#")-->
+<!--insert investigation html @ line 267 (replace "#")-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -125,17 +125,17 @@
 				document.getElementById("sprite").style.display = "block";
 				break;
 				case 20:
-				par[0].innerHTML = "I was in the Bio Lab, where I was studying about blood types. I was bored, so I tried doing calligraphy the whole period."
+				par[0].innerHTML = "I was in the Bio Lab, where I was studying about <em>blood types.</em> I was bored, so I tried doing calligraphy the whole period."
 				document.getElementById("sprite").src = "../Sprites/Sophie/sophietalking.png";
 				document.getElementById("sprite").style.display = "block";
 				break;
 				case 21:
-				par[0].innerHTML = "Then, it was Chem, where we had the free time to experiment with different kinds of solutions."
+				par[0].innerHTML = "Then, it was Chem, where we had the free time to <em>experiment with different kinds of solutions.</em>"
 				document.getElementById("sprite").src = "../Sprites/Sophie/sophie.png";
 				document.getElementById("sprite").style.display = "block";
 				break;
 				case 22:
-				par[0].innerHTML = "Then, it was umm..uhh, I'm sorry, I forgot! My memory's not the best. Oh, and I left my journal somewhere! I think. Aaaaa, I need to go!"
+				par[0].innerHTML = "Then, it was umm..uhh, I'm sorry, I forgot! My memory's not the best. Oh, and I left my <em>journal</em> somewhere that day! I think. Aaaaa, I need to go!"
 				document.getElementById("sprite").src = "../Sprites/Sophie/sophietalking.png";
 				document.getElementById("sprite").style.display = "block";
 				break;
@@ -186,8 +186,68 @@
 					document.getElementById("sprite").style.display = "block";
 					break;
 					case 31:
-					par[0].innerHTML = "Urgh, they just won't give me my laptop!"
+					par[0].innerHTML = "Urgh, why did they have to keep my laptop!"
 					document.getElementById("sprite").src = "../Sprites/Mark/MarkAngry.png";
+					document.getElementById("sprite").style.display = "block";
+					break;
+					case 32:
+					par[0].innerHTML = "Marcus! What are you doing here?"
+					document.getElementById("sprite").src = "../Sprites/Jessie/jessie.png";
+					document.getElementById("sprite").style.display = "block";
+					break;
+					case 33:
+					par[0].innerHTML = "Ehehehe, the police won't let me get my laptop, but I'm here to get it while they're not here."
+					document.getElementById("sprite").src = "../Sprites/Mark/MarkNervous.png";
+					document.getElementById("sprite").style.display = "block";
+					break;
+					case 34:
+					par[0].innerHTML = "Hm. Ok. Do you know anything about Nate?"
+					document.getElementById("sprite").src = "../Sprites/Jessie/jessie.png";
+					document.getElementById("sprite").style.display = "block";
+					break;
+					case 35:
+					par[0].innerHTML = "Oh, my brother? Well he's very popular."
+					document.getElementById("sprite").src = "../Sprites/Mark/MarkNeutralTalking.png";
+					document.getElementById("sprite").style.display = "block";
+					break;
+					case 36:
+					par[0].innerHTML = "No, about this incident, I mean. Two days ago."
+					document.getElementById("sprite").src = "../Sprites/Jessie/jessietalking.png";
+					document.getElementById("sprite").style.display = "block";
+					break;
+					case 37:
+					par[0].innerHTML = "Oh! Well, I really don't know! <em>I was just in this room, just before dismissal.</em>"
+					document.getElementById("sprite").src = "../Sprites/Mark/MarkTalking.png";
+					document.getElementById("sprite").style.display = "block";
+					break;
+					case 38:
+					par[0].innerHTML = "Sadly, little did I know my little brother was murdered."
+					document.getElementById("sprite").src = "../Sprites/Mark/MarkWorried.png";
+					document.getElementById("sprite").style.display = "block";
+					break;
+					case 39:
+					par[0].innerHTML = "I thought he was going to do one of his biology projects, so I went to the <em>bio lab</em> to see if he was there. He wasn't."
+					document.getElementById("sprite").src = "../Sprites/Mark/MarkNeutral.png";
+					document.getElementById("sprite").style.display = "block";
+					break;
+					case 40:
+					par[0].innerHTML = "The fact that he was murdered <em>right after I left this room</em>... is a bit unsettling."
+					document.getElementById("sprite").src = "../Sprites/Mark/MarkWorried.png";
+					document.getElementById("sprite").style.display = "block";
+					break;
+					case 41:
+					par[0].innerHTML = "Hmmm... That is strange. "
+					document.getElementById("sprite").src = "../Sprites/Jessie/jessietalking.png";
+					document.getElementById("sprite").style.display = "block";
+					break;
+					case 42:
+					par[0].innerHTML = "Why don't we investigate this room further for more clues about the culprit?"
+					document.getElementById("sprite").src = "../Sprites/Jessie/jessietalking.png";
+					document.getElementById("sprite").style.display = "block";
+					break;
+					case 43:
+					par[0].innerHTML = "Sure, go ahead."
+					document.getElementById("sprite").src = "../Sprites/Mark/MarkNervous.png";
 					document.getElementById("sprite").style.display = "block";
 					break;
 				}
@@ -200,11 +260,11 @@
 								else if(line>12 && line<=27){
                 	scene2();
 								}
-								else if(line>27 && line<=100){
+								else if(line>27 && line<=43){
                 	scene3();
 								}
-								else if(line==101){
-									window.location.href = "#";
+								else if(line==44){
+									window.location.href = "investigation2.html";
 								}
             }
 		var prevLine = function() {
@@ -215,7 +275,7 @@
 								else if(line>12 && line<=27){
                 	scene2();
 								}
-								else if(line>27 && line<=100){
+								else if(line>27 && line<=43){
                 	scene3();
 								}
             }
