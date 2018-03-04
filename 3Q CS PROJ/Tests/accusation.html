@@ -144,8 +144,9 @@
 		var accuse = function() {
 		do{
 			var accused = prompt("Who do you accuse", "Options: Marcus, Sophie, Darla, Jessie, or yourself(??)")
-			while(accused=="Marcus"||accused=="Darla"){
-					accused = prompt("I don't think so... The evidence points elsewhere...", "Again, options: Marcus, Sophie, Darla, Jessie, or yourself?")
+			if(accused=="Marcus"||accused=="Darla"){
+					window.open("loserscreen.html");
+					window.close();
 			}
 			while(accused!="Marcus"&&accused!="Darla"&&accused!="Sophie"&&accused!="Jessie"&&accused!="You"&&accused!="you"&&accused!="Me"&&accused!="me"&&accused!="Myself"&&accused!="myself"){
 				accused = prompt("Who is that? Mind your capitalisation and spelling. I am not part of the literature club for nothing.", "Again, options: Marcus, Sophie, Darla, Jessie, or yourself?")
@@ -167,10 +168,7 @@
 			}
 		}while(accused!="Sophie"&&accused!="Jessie"&&accused!="You"&&accused!="you"&&accused!="Me"&&accused!="me"&&accused!="Myself"&&accused!="myself")
 		if(accused=="Sophie"){
-				par[0].innerHTML = "Congratulations!!! She indeed was the murderer!!!"
-				document.getElementById("sprite").src = "../Sprites/Jessie/jessiehappy.png";
-				document.getElementById("sprite").style.display = "block";
-				document.getElementById("next").style.display = "none";
+				window.location.href="CaseFile.html";
 			}
 		}
 	</script>
