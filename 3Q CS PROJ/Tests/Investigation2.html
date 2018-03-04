@@ -162,6 +162,19 @@ top: 428px;
 </head>
 <body>
 <script>
+    var audio = new Audio("../Music/danganrompa.mp3");
+    audio.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+    }, false);
+    audio.play();
+    audio.volume=0.075
+    var mute = function(){
+      audio.pause();
+    }
+    var resume = function(){
+      audio.play();
+    }
 		var par = document.getElementsByTagName("p")
 		var line = 0
 		var scene1 = function(){
@@ -704,6 +717,28 @@ par[0].innerHTML = "I don't think you can accuse anyone with that...keep looking
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();
 });
+
+document.onkeydown = checkKey;
+var m=0;
+function checkKey(e) {
+  e = e || window.event;
+  if (e.keyCode == '37') {
+    prevLine();
+  }
+  else if (e.keyCode == '39') {
+    nextLine();
+  }
+  else if (e.keyCode =='77'){
+    if (m%2==0){
+      mute();
+      m++;
+    }
+    else if (m%2==1){
+      resume();
+      m++;
+    }
+  }
+}
 
 </script>
 </body>

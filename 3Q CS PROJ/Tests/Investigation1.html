@@ -725,6 +725,28 @@ $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();
 });
 
+document.onkeydown = checkKey;
+var m=0;
+function checkKey(e) {
+  e = e || window.event;
+  if (e.keyCode == '37') {
+    prevLine();
+  }
+  else if (e.keyCode == '39') {
+    nextLine();
+  }
+  else if (e.keyCode =='77'){
+    if (m%2==0){
+      mute();
+      m++;
+    }
+    else if (m%2==1){
+      resume();
+      m++;
+    }
+  }
+}
+
 </script>
 </body>
 </html>
