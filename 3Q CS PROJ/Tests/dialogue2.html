@@ -13,6 +13,13 @@
 		}
 	</style>
 	<script>
+		var audio = new Audio("../Music/gypsy.mp3");
+		audio.addEventListener('ended', function() {
+		this.currentTime = 0;
+		this.play();
+		}, false);
+		audio.play();
+		audio.volume=0.055;
 		var par = document.getElementsByTagName("p")
 		var line = 0
 		var scene1 = function(){

@@ -15,6 +15,10 @@
 	<script>
 	window.alert("Controls:\nleft/right arrow keys/buttons: navigate\n'm': mute/play music\nclick: add in inventory\ndouble-click: remove from inventory")
 	var audio = new Audio("../Music/Professor Layton & The Curious Village Soundtrack - Layton's Theme.mp3");
+	audio.addEventListener('ended', function() {
+	this.currentTime = 0;
+	this.play();
+	}, false);
   audio.play();
 	audio.volume=0.075
 	var mute = function(){

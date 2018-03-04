@@ -170,6 +170,10 @@ top: 428px;
 <body>
 <script>
     var audio = new Audio("../Music/danganrompa.mp3");
+    audio.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+    }, false);
     audio.play();
     audio.volume=0.075
     var mute = function(){
